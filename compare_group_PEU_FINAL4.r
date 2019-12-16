@@ -1,4 +1,6 @@
 #--------------------------------------------------------------------------------#
+#[16.11.2019]               (ACTUALITZACIONS)
+#--------------------------------------------------------------------------------#
 #[09.04.2019]
 #--------------------------------------------------------------------------------#
 #[08.04.2019]
@@ -113,11 +115,9 @@ LAB_ETIQ_v2<-function(dt=dades,variables_factors=conductor_variables,fulla="etiq
   
   dt}
 #------------------------------------------------------------------#
-
-
-
-
+#install.packages("readxl")
 #--------------------------------------------------------------------------------#
+library("readxl")
 library(magrittr)
 library(svglite)
 library(rsvg)
@@ -359,8 +359,8 @@ library(compareGroups)
 
 
 #----------------------------------------------------#
-setwd("C:/Users/38122893W/Desktop/PeuCat_Final2")
-"C:/Users/38122893W/Desktop/PeuCat_Final2"%>% file.path("funcions_propies_2019.R") %>% source()
+#setwd("C:/Users/38122893W/Desktop/PeuCat_Final2")
+#"C:/Users/38122893W/Desktop/PeuCat_Final2"%>% file.path("funcions_propies_2019.R") %>% source()
 #----------------------------------------------------
 
 
@@ -368,16 +368,8 @@ setwd("C:/Users/38122893W/Desktop/PeuCat_Final2")
 #setwd("C:/Users/Suta/Desktop/peuCat_FINAL2")
 #"C:/Users/Suta/Desktop/peucat_FINAL2"%>% file.path("funcions_propies_2019.R") %>% source()
 #----------------------------------------------------
-
-
-
 fitxer_dades<-"exportacionCRD_peu_cat_final3.xls"
 PEU_CAT_CDRS<-read_excel(fitxer_dades,sheet="CRDS")
-
-
-
-
-
 ########################################################################
 #[Transforamcions de les variables!]: [R E C O D I F I C A C I O N S] 
 ########################################################################
@@ -639,10 +631,14 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS%>%mutate(ArtPer_Izq=tibPosIzq+pedioIzq)
 
 
 
+
+#ok
+
+
 #Antecedentes?lceras
 #------------------------------------------------------------------#
 
-PEU_CAT_CDRS_ulceras<-read_excel(fitxer_dades,sheet="Antecedentes?lceras")
+PEU_CAT_CDRS_ulceras<-read_excel(fitxer_dades,sheet="Antecedentesulceras")
 
 #PEU_CAT_CDRS_ulceras 
 
