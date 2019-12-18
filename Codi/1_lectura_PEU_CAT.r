@@ -634,7 +634,7 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS%>%mutate(ArtPer_Izq=tibPosIzq+pedioIzq)
 #ok
 
 #Antecedentes ulceras
-#------------------------------------------------------------------#
+
 PEU_CAT_CDRS_ulceras<-read_excel(fitxer_dades,sheet="Antecedentesulceras")
 
 #PEU_CAT_CDRS_ulceras 
