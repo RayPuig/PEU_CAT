@@ -1,0 +1,103 @@
+---
+output:
+  html_document: default
+  word_document: default
+  pdf_document: default
+---
+
+---
+title: "Incidencia y evoluciOn de las Ulceras en los pies  de pacientes diabeticos en atenciOn primaria.Estudio Multicentrico"
+author: "Ramon Puig & Jordi Real"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+rm(list=ls())
+library("data.table")
+library("SNPassoc")
+library("htmlwidgets")
+library("compareGroups")
+library("foreign")
+library("lattice")
+library("Hmisc")
+library("ggplot2")
+library("pander")
+library("readxl")
+library("rmarkdown")
+library("knitr")
+library("data.table")
+library("MatchIt")
+library("survival")
+library("plyr")
+library("dplyr")
+library("survminer")
+library("purrr")
+library("stringr")
+library("tidyverse")
+library("tidyr")
+library("purrr")
+library(data.table)
+library(foreign)
+library(dplyr)
+library(lattice)
+library(SNPassoc)
+library(haplo.stats)
+library(mvtnorm)
+library(parallel)
+```
+
+
+
+
+```{r, message=FALSE, warning=FALSE, include=T, echo=FALSE,size="huge"}
+####  Llegir dades    #####
+
+
+load("PEUCAT.Rdata")
+
+#Taula00
+export2md(T00,caption="Criterios de Inclusion")
+
+
+```
+
+
+### **Criterios de Exclusion** 
+
+
+```{r, out.width='85%', fig.align='center', fig.cap='...',echo=FALSE}
+
+knitr::include_graphics('flowchart.jpeg')
+
+
+
+
+```
+
+
+
+
+```{r, message=FALSE, warning=FALSE, include=T, echo=FALSE,size="huge"}
+
+#Taula0
+export2md(T0,caption="**Criterios de Exclusion**")
+#Taula1
+export2md(T1,caption="**Caracteristicas Demograficas**")
+#Taula2
+export2md(T2,caption="**Tratamientos**")
+#Taula3
+export2md(T3,caption="**Analaticas**")
+#Taula3ERROR
+export2md(T3Error,caption="**Analaticas ERROR**")
+#Taula3Corregit
+export2md(T3corregit,caption="**Analaticas Error_Corregit**")
+#Taula4
+export2md(T4,caption="**Inspeccion del lo pies**")
+
+
+```
+
+
