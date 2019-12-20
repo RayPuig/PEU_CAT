@@ -1,5 +1,6 @@
+#[20.12.2019]
 #--------------------------------------------------------------------------------#
-#[18.12.2019]                       (ACTUALITZACIONS)
+#[19.12.2019]                       (ACTUALITZACIONS)
 #--------------------------------------------------------------------------------#
 #[16.11.2019]               
 #--------------------------------------------------------------------------------#
@@ -168,6 +169,167 @@ devtools::source_url(link_source)
 #--------------------------------------------------------------------------#
 
 
+#[actual! ]
+#--------------------------------------------------------------------------#
+#--------------------------------------------------------------------------#
+#idcrd
+#Estado_paciente_Incluido
+#Estado_paciente_Discontinuado_abandono
+#Estado_paciente_Discontinuado_fallecimiento
+#Estado_Crd_En_Curso
+#Estado_Crd_Finalizado
+#idinvestigador
+#--------------------------------------------------------------------------#
+#--------------------------------------------------------------------------#
+#Fecha_consentimiento_informado
+#Codigo_paciente
+#CIP
+#Criterios_inclusion_1
+#Criterios_inclusion_2
+#Criterios_inclusion_3
+#Criterios_exclusion_1
+#Criterios_exclusion_2
+#Criterios_exclusion_3
+#--------------------------------------------------------------------------#
+#--------------------------------------------------------------------------#
+#Fecha_nacimiento
+#Edad
+#Sexo_Hombre
+#Sexo_Mujer
+#Etnia_Caucasica
+#Etnia_Hispanoamericana
+#Etnia_Indostani
+#Etnia_Africana
+#Etnia_Otras
+#Especificar_etnia
+#Tabaquismo_No
+#Tabaquismo_Si
+#Tabaquismo_Exfumador
+#Cigarrillos_dia
+#Anos_tabaquismo
+#Paquetes_Ano
+#Alcohol_Abstemio
+#Alcohol_Bajo_Riesgo
+#Alcohol_Riesgo_elevado
+#Antecedentes_de_consumo_excesivo
+#--------------------------------------------------------------------------#
+#--------------------------------------------------------------------------#
+#PA_sistolica_1
+#Pa_diastolica_1
+#PA_sistolica_2
+#PA_diastolica_2
+#MEDIA_PAS
+#MEDIA_PAD
+#Diagnostico_HTA
+#Diagnostico_dislipemia
+#AVC
+#AVC_ano
+#Cardiopatia_isquemica
+#Cardiopatia_isquemica_ano
+#Arteriopatia_periferica
+#Arteriopatia_periferica_ano
+#Antecedentes_por_intervención_de_arteriopatia_periferica
+#Antecedentes_por_intervencion_de_arteriopatia_periferica_ano
+#Antecedentes_personales_de_insuficiencia_cardiaca
+#Antecedentes_personales_de_insuficiencia_cardiaca_ano
+#--------------------------------------------------------------------------#
+#--------------------------------------------------------------------------#
+#Diagnostico_en_la_visita_basal
+#Ano_de_diagnostico_definitivo_de_DM
+#TratamientoDM2_Sin_tratamiento
+#TratamientoDM2_Metformina
+#TratamientoDM2_SU
+#TratamientoDM2_Pioglitazona
+#TratamientoDM2_Repaglinida
+#TratamientoDM2_iDPP4
+#TratamientoDM2_iSGLT2
+#TratamientoDM2_Analogos_GLP1
+#TratamientoDM2_Insulina
+#TratamientoDM2_αglucosidasa
+#TratamientoDM2_Otros
+#TratamientoDM2_Explicacion_Otros
+#Tratamiento_diabetes_no_farmacologico
+#Tratamiento_diabetes_no_farmacologico_dieta_y_ejercicios
+#Retinopatia
+#Retinopatia_ano
+#Neuropatia_periferica
+#Neuropatia_periferica_ano
+#Neuropatia_autonoma
+#Neuropatia_autonoma_ano
+#Insuficiencia_renal_cronica
+#Insuficiencia_renal_cronica_ano
+#Microalbuminuria
+#Microalbuminuria_ano
+#Macroalbuminuria_o_proteinuria_24_horas
+#Macroalbuminuria_o_proteinuria_24_horas_ano
+#Actualmente_en_dialisis
+#Actualmente_en_dialisis_ano
+#Transplante_renal
+#Transplante_renal_ano
+#Neuroartropatia_de_Charcot
+#Neuroartropatia_de_Charcot_ano
+#--------------------------------------------------------------------------#
+#--------------------------------------------------------------------------#
+#Fecha_analitica
+#HBA1C
+#Colesterol_total
+#Unidad_Colesterol_total
+#HDL
+#Unidad_HDL
+#LDL
+#Unidad_LDL
+#Trigliceridos
+#Unidad_Trigliceridos
+#Creatinina
+#Unidad_Creatinina
+#Filtrado_glomerular_estimado
+#Unidad_Filtrado_glomerular_estimado
+#Cociente_Albumina_Creatinina_o_proteinuria
+#Unidad_Cociente_Albumina_Creatinina_o_proteinuria
+#Fecha_exploracion
+#Peso
+#Talla
+#IMC
+#Disminucion_de_la_agudeza_visual
+#Problemas_con_la_movilidad
+#Tiene_cuidador
+#Visita_al_podologo_en_el_ultimo_ano
+#Calzado_correcto
+#Hidratacion_correcta
+#Espacios_interdigitales_con_lesiones_micoticas
+#Patologia_ungueal
+#Cuidado_de_las_unas_correcto
+#Hiperqueratosis_callosidades
+#Edema_maleolar
+#Otros137
+#Explicacion_otros
+#Deformidades
+#Dedos_en_garra_martillo
+#Halluxvalgus
+#Pie_plano_cavo
+#Sobrecarga_metatarsianos
+#Charcot
+#Otras145
+#Tibial_posterior_pie_derecho
+#Tibial_posterior_pie_izquierdo
+#Pediopie_derecho
+#Pediopie_izquierdo
+#Es_valorable
+#Fecha_de_ITB
+#Derecho
+#Izquierdo
+#Motivo_no_realizacion
+#Neuropatia_periferica_valorable
+#Monofilamento_pie_derecho
+#Monofilamento_pie_izquierdo
+#Sensibilidad_vibratoria_pie_derecho
+#Sensibilidad_vibratoria_pie_izquierdo
+#Ipswitch_Touch_Test_derecho
+#Ipswitch_Touch_Test_izquierdo
+#Motivo_no_realizacion
+#--------------------------------------------------------------------------#
+#--------------------------------------------------------------------------#
+#[abans! ]
 #--------------------------------------------------------------------------------#
 #idcrd                                  [idcrd]
 #estPacInc	                            [Estado paciente.Incluido]
@@ -186,11 +348,9 @@ devtools::source_url(link_source)
 #exclu1	                                [Criterios exclusion 1]
 #exclu2	                                [Criterios exclusion 2]
 #exclu3	                                [Criterios exclusion 3]
-
 #--------------------------------------------------------------------------------#
 #                 Base de datos CRDS GENERAL                                     #
 #--------------------------------------------------------------------------------#
-
 #fNac	                                  [Fecha nacimiento]
         #i--> Demografiques: edat i sexe
 #edad	                                  [Edad]
@@ -333,6 +493,27 @@ devtools::source_url(link_source)
 #ipsNoReal	                            [Motivo no realizacion]
 #--------------------------------------------------------------------------------#
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #----------------------------------------------------#
 #casa-->Av Estatut de Catalunya!.
 #----------------------------------------------------#
@@ -363,21 +544,19 @@ devtools::source_url(link_source)
 #setwd("C:/Users/Suta/Desktop/peuCat_FINAL2")
 #"C:/Users/Suta/Desktop/peucat_FINAL2"%>% file.path("funcions_propies_2019.R") %>% source()
 #----------------------------------------------------#
-
 #EPPPPS!!!! dubte preguntar Jordi Real!!
-setwd("Dades")
-
-
 fitxer_dades<-"exportacion22112019_Dep_Magda2.xls"
-PEU_CAT_CDRS<-read_excel(fitxer_dades,sheet="exportacionCRDS")
-
-
-
+#----------------------------------------------------#
+#read_excel("Dades/exportacion22112019_Dep_Magda2.xls",sheet="exportacionCRDS")
+#read_excel(paste0("Dades/","exportacion22112019_Dep_Magda2.xls"),sheet="exportacionCRDS")
+#read_excel(paste0("Dades/",fitxer_dades),sheet="exportacionCRDS")
+#read_excel(paste0("Dades/",fitxer_dades),sheet="exportacionCRDS")
+PEU_CAT_CDRS<-read_excel(here::here("Dades",fitxer_dades),sheet="exportacionCRDS")
+#----------------------------------------------------#
+#PEU_CAT_CDRS<-read_excel(fitxer_dades,sheet="exportacionCRDS")
 variable.names(PEU_CAT_CDRS)
-
 #fitxer_dades="exportacionCRD_peu_cat_final3.xls"
 #PEU_CAT_CDRS<-read_excel(fitxer_dades,sheet="CRDS")
-
 #[1] "idcrd"                                                       
 #[2] "Estado_paciente_Incluido"                                    
 #[3] "Estado_paciente_Discontinuado_abandono"                      
@@ -523,7 +702,7 @@ variable.names(PEU_CAT_CDRS)
 #[143] "Ipswitch_Touch_Test_derecho"                                 
 #[144] "Ipswitch_Touch_Test_izquierdo"                               
 #[145] "Motivo_no_realizacion...145"  
-
+#################################################
 
 
 
@@ -590,6 +769,7 @@ variable.names(PEU_CAT_CDRS)
 
 
 
+#PEU_CAT_CDRS$Ano_de_diagnostico_definitivo_de_DM
 
 
 
@@ -601,43 +781,108 @@ variable.names(PEU_CAT_CDRS)
 #----------------------------------------------------------------#
 #i)-Tiempo evolucion de la diabetes mellitus==fConsenti2
 #----------------------------------------------------------------#
-PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
-  mutate(fConsenti2=as.numeric(substring(fConsenti,1,4)))
-#PEU_CAT_CDRS$fConsenti2
+PEU_CAT_CDRS<-PEU_CAT_CDRS %>% 
+  mutate(Fecha_consentimiento_informado=data_convert_text(Fecha_consentimiento_informado)) 
+#----------------------------------------------------------------#
+PEU_CAT_CDRS<-PEU_CAT_CDRS %>%
+  mutate(Ano_consentimiento_informado=as.numeric(format(PEU_CAT_CDRS$Fecha_consentimiento_informado,'%Y'))) 
+#----------------------------------------------------------------#  
 
 PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
-  mutate(TiempDM=fConsenti2-anoDiagDm)
+  mutate(TiempDM=(Ano_consentimiento_informado) -Ano_de_diagnostico_definitivo_de_DM)
+#----------------------------------------------------------------#
+#PEU_CAT_CDRS$Ano_de_diagnostico_definitivo_de_DM
+#PEU_CAT_CDRS$Ano_consentimiento_informado
 #PEU_CAT_CDRS$TiempDM
+#----------------------------------------------------------------#
 
 #------------------------------------------------------------------#
+#PEU_CAT_CDRS<-PEU_CAT_CDRS%>%mutate(fConsenti2=as.numeric(substring(fConsenti,1,4)))
+#PEU_CAT_CDRS$fConsenti2
+#------------------------------------------------------------------#
+#PEU_CAT_CDRS<-PEU_CAT_CDRS%>%mutate(TiempDM=fConsenti2-anoDiagDm)
+#PEU_CAT_CDRS$TiempDM
+#------------------------------------------------------------------#
+
+
 
 #----------------------------------------------------------------#
 #ii)-Pacients Incluits(s/n)==PacInc, Pacients Excluits(s/n)==PacExc, PacIncExc(0	Pacients Excluidos 1:Pacientes Incluidos)
 #----------------------------------------------------------------#
-PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
-  mutate(PacInc=ifelse(inclu1==1 & inclu2==1 & inclu3==1 ,1,0))
+
+#Criterios_inclusion_1
+#Criterios_inclusion_2
+#Criterios_inclusion_3
+#.....................#
+#Criterios_exclusion_1
+#Criterios_exclusion_2
+#Criterios_exclusion_3
+
+#   x | y	 OR
+#   x & y	 AND 
+
 
 PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
-  mutate(PacExc=ifelse(exclu1==1  | exclu2==1  | exclu3==1,1,0))
+  mutate(PacInc=ifelse(Criterios_inclusion_1==1 & Criterios_inclusion_2==1 & Criterios_inclusion_1==1 ,1,0))
+
+PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
+  mutate(PacExc=ifelse(Criterios_exclusion_1==1  | Criterios_exclusion_2==1  | Criterios_exclusion_3==1,1,0))
 
 PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
   mutate(PacIncExc=ifelse(PacInc==1 & PacExc==0 ,1,0))
+
+
+
+#PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
+#  mutate(PacInc=ifelse(inclu1==1 & inclu2==1 & inclu3==1 ,1,0))
+
+#PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
+#  mutate(PacExc=ifelse(exclu1==1  | exclu2==1  | exclu3==1,1,0))
+
+#PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
+#  mutate(PacIncExc=ifelse(PacInc==1 & PacExc==0 ,1,0))
+
 #------------------------------------------------------------------#
 
+
+
 #----------------------------------------------------------------#
-#iii)-Monofilamento==(monoIzq,monoDer) 
+#iii)
+
+#Monofilamento_pie_derecho
+#Monofilamento_pie_izquierdo
+
+#-Monofilamento==(monoIzq,monoDer) 
 # -	Normal: 4 puntos encontrados
-# -	Patol?gico:  ??? 3 puntos
+# -	PatolOgico:  ??? 3 puntos
 #----------------------------------------------------------------#
+
+
+
+
 #------------------------------------------------------------------#
 #monoDer  
 PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
-  mutate(monoDer=case_when(monoDer==4 ~ 0,monoDer<=3  ~ 1,TRUE~ NA_real_))
+  mutate(Monofilamento_pie_derecho=case_when(Monofilamento_pie_derecho==4 ~ 0,Monofilamento_pie_derecho<=3  ~ 1,TRUE~ NA_real_))
 #------------------------------------------------------------------#
 #monoIzq    
 PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
-  mutate(monoIzq=case_when(monoIzq==4 ~ 0,monoIzq<=3  ~ 1,TRUE~ NA_real_))
+  mutate(Monofilamento_pie_izquierdo=case_when(Monofilamento_pie_izquierdo==4 ~ 0,Monofilamento_pie_izquierdo<=3  ~ 1,TRUE~ NA_real_))
 #------------------------------------------------------------------#
+
+
+
+#------------------------------------------------------------------#
+#monoDer  
+#PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
+#  mutate(monoDer=case_when(monoDer==4 ~ 0,monoDer<=3  ~ 1,TRUE~ NA_real_))
+#------------------------------------------------------------------#
+#monoIzq    
+#PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
+#  mutate(monoIzq=case_when(monoIzq==4 ~ 0,monoIzq<=3  ~ 1,TRUE~ NA_real_))
+#------------------------------------------------------------------#
+
+
 
 
 #------------------------------------------------------------------#
@@ -645,14 +890,32 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
 # -	normal: 3 puntos
 # -	patol?gico: ??? 2 puntos
 #------------------------------------------------------------------#
+
+
+
+
+
 #------------------------------------------------------------------#
 #ipsDer   
 PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
-  mutate(ipsDer=case_when(ipsDer==3 ~ 0,ipsDer<=2  ~ 1,TRUE~ NA_real_))
+  mutate(Ipswitch_Touch_Test_derecho=case_when(Ipswitch_Touch_Test_derecho==3 ~ 0,Ipswitch_Touch_Test_derecho<=2  ~ 1,TRUE~ NA_real_))
 #------------------------------------------------------------------#
 #ipsIzq
 PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
-  mutate(ipsIzq=case_when(ipsIzq==3 ~ 0,ipsIzq<=2  ~ 1,TRUE~ NA_real_))
+  mutate(Ipswitch_Touch_Test_izquierdo=case_when(Ipswitch_Touch_Test_izquierdo==3 ~ 0,Ipswitch_Touch_Test_izquierdo<=2  ~ 1,TRUE~ NA_real_))
+#------------------------------------------------------------------#
+
+PEU_CAT_CDRS$Ipswitch_Touch_Test_izquierdo
+
+
+#------------------------------------------------------------------#
+#ipsDer   
+#PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
+#  mutate(ipsDer=case_when(ipsDer==3 ~ 0,ipsDer<=2  ~ 1,TRUE~ NA_real_))
+#------------------------------------------------------------------#
+#ipsIzq
+#PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
+#  mutate(ipsIzq=case_when(ipsIzq==3 ~ 0,ipsIzq<=2  ~ 1,TRUE~ NA_real_))
 #------------------------------------------------------------------#
 
 
@@ -662,8 +925,16 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
 #------------------------------------------------------------------#
 #PEU_CAT_CDRS$sensVibDer
 #PEU_CAT_CDRS$sensVibIzq
-PEU_CAT_CDRS<-PEU_CAT_CDRS%>%mutate(monoPatSensAustente_Der=ifelse(monoDer==1 & sensVibDer==0  ,1,0))
-PEU_CAT_CDRS<-PEU_CAT_CDRS%>%mutate(monoPatSensAustente_Izq=ifelse(monoIzq==1 & sensVibIzq==0  ,1,0))
+
+PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
+  mutate(monoPatSensAustente_Der=ifelse(Monofilamento_pie_derecho==1 & Sensibilidad_vibratoria_pie_derecho==0,1,0))
+
+PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
+  mutate(monoPatSensAustente_Izq=ifelse(Monofilamento_pie_izquierdo==1 & Sensibilidad_vibratoria_pie_izquierdo==0,1,0))
+#------------------------------------------------------------------#
+
+#PEU_CAT_CDRS<-PEU_CAT_CDRS%>%mutate(monoPatSensAustente_Der=ifelse(monoDer==1 & sensVibDer==0  ,1,0))
+#PEU_CAT_CDRS<-PEU_CAT_CDRS%>%mutate(monoPatSensAustente_Izq=ifelse(monoIzq==1 & sensVibIzq==0  ,1,0))
 #------------------------------------------------------------------#
 
 
@@ -678,10 +949,13 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS%>%mutate(monoPatSensAustente_Izq=ifelse(monoIzq==1 & 
 #Sexo.Hombre
 #Sexo.Mujer
 
-
 #------------------------------------------------------------------#
-PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
-  mutate(Sexo=case_when(sexoHombre==1 & sexoMujer==0 ~ 1,sexoHombre==0 & sexoMujer==1 ~ 2,TRUE~ NA_real_))
+PEU_CAT_CDRS<-PEU_CAT_CDRS%>%mutate(Sexo=case_when(Sexo_Hombre==1 & Sexo_Mujer==0 ~ 1,Sexo_Hombre==0 & Sexo_Mujer==1 ~ 2,TRUE~ NA_real_))
+#------------------------------------------------------------------#
+PEU_CAT_CDRS$Sexo
+#------------------------------------------------------------------#
+#PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
+#  mutate(Sexo=case_when(sexoHombre==1 & sexoMujer==0 ~ 1,sexoHombre==0 & sexoMujer==1 ~ 2,TRUE~ NA_real_))
 #------------------------------------------------------------------#
 
 
@@ -701,24 +975,40 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
 # etniaAfr    [4]	
 # etniaOtr    [5]
 #------------------------------------------------------------------#
+
+
 PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
-  mutate(Etnia=case_when(etniaCau==1 & etinaHisp==0 & etniaIndos==0 & etniaAfr==0 & etniaOtr==0 ~ 1,
-                         etniaCau==0 & etinaHisp==1 & etniaIndos==0 & etniaAfr==0 & etniaOtr==0 ~ 2,
-                         etniaCau==0 & etinaHisp==0 & etniaIndos==1 & etniaAfr==0 & etniaOtr==0 ~ 3,
-                         etniaCau==0 & etinaHisp==0 & etniaIndos==0 & etniaAfr==1 & etniaOtr==0 ~ 4,
-                         etniaCau==0 & etinaHisp==0 & etniaIndos==0 & etniaAfr==0 & etniaOtr==1 ~ 5
-                                                  ,TRUE~ NA_real_))
+  mutate(Etnia=case_when(Etnia_Caucasica==1 & Etnia_Hispanoamericana==0 & Etnia_Indostani==0 & Etnia_Africana==0 & Etnia_Otras==0 ~ 1,
+                         Etnia_Caucasica==0 & Etnia_Hispanoamericana==1 & Etnia_Indostani==0 & Etnia_Africana==0 & Etnia_Otras==0 ~ 2,
+                         Etnia_Caucasica==0 & Etnia_Hispanoamericana==0 & Etnia_Indostani==1 & Etnia_Africana==0 & Etnia_Otras==0 ~ 3,
+                         Etnia_Caucasica==0 & Etnia_Hispanoamericana==0 & Etnia_Indostani==0 & Etnia_Africana==1 & Etnia_Otras==0 ~ 4,
+                         Etnia_Caucasica==0 & Etnia_Hispanoamericana==0 & Etnia_Indostani==0 & Etnia_Africana==0 & Etnia_Otras==1 ~ 5
+                         ,TRUE~ NA_real_))
+#-----------
+
+
+#PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
+#  mutate(Etnia=case_when(etniaCau==1 & etinaHisp==0 & etniaIndos==0 & etniaAfr==0 & etniaOtr==0 ~ 1,
+#                         etniaCau==0 & etinaHisp==1 & etniaIndos==0 & etniaAfr==0 & etniaOtr==0 ~ 2,
+#                         etniaCau==0 & etinaHisp==0 & etniaIndos==1 & etniaAfr==0 & etniaOtr==0 ~ 3,
+#                         etniaCau==0 & etinaHisp==0 & etniaIndos==0 & etniaAfr==1 & etniaOtr==0 ~ 4,
+#                         etniaCau==0 & etinaHisp==0 & etniaIndos==0 & etniaAfr==0 & etniaOtr==1 ~ 5
+#                                                  ,TRUE~ NA_real_))
 #------------------------------------------------------------------#
 
 
 #------------------------------------------------------------------#
 #viii)-Tabaco
 #------------------------------------------------------------------#
+#Tabaquismo.No
+#Tabaquismo.Si
+#Tabaquismo.Exfumador
 
-Tabaquismo.No
-Tabaquismo.Si
-Tabaquismo.Exfumador
-
+PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
+  mutate(Tabaco=case_when(Tabaquismo_No==1 & Tabaquismo_Si==0 & Tabaquismo_Exfumador==0  ~ 1,
+                          Tabaquismo_No==0 & Tabaquismo_Si==1 & Tabaquismo_Exfumador==0  ~ 2,
+                          Tabaquismo_No==0 & Tabaquismo_Si==0 & Tabaquismo_Exfumador==1  ~ 3
+                          ,TRUE~ NA_real_))
 
 #------------------------------------------------------------------#
 #Tabaco:[]
@@ -726,11 +1016,11 @@ Tabaquismo.Exfumador
 #tabacoSi	    [2]
 #tabacoEx     [3]
 #------------------------------------------------------------------#
-PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
-  mutate(Tabaco=case_when(tabNo==1 & tabacoSi==0 & tabacoEx==0  ~ 1,
-                          tabNo==0 & tabacoSi==1 & tabacoEx==0  ~ 2,
-                          tabNo==0 & tabacoSi==0 & tabacoEx==1  ~ 3
-                         ,TRUE~ NA_real_))
+#PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
+#  mutate(Tabaco=case_when(tabNo==1 & tabacoSi==0 & tabacoEx==0  ~ 1,
+#                          tabNo==0 & tabacoSi==1 & tabacoEx==0  ~ 2,
+#                          tabNo==0 & tabacoSi==0 & tabacoEx==1  ~ 3
+#                         ,TRUE~ NA_real_))
 
 
 #------------------------------------------------------------------#
@@ -743,10 +1033,18 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
 #alcAlt[3]
 #------------------------------------------------------------------#
 PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
-  mutate(Alc=case_when(alcAbs==1 & alcBaj==0 & alcAlt==0  ~ 1,
-                          alcAbs==0 & alcBaj==1 & alcAlt==0  ~ 2,
-                          alcAbs==0 & alcBaj==0 & alcAlt==1  ~ 3
-                          ,TRUE~ NA_real_))
+  mutate(Alc=case_when(Alcohol_Abstemio==1 & Alcohol_Bajo_Riesgo==0 & Alcohol_Riesgo_elevado==0  ~ 1,
+                       Alcohol_Abstemio==0 & Alcohol_Bajo_Riesgo==1 & Alcohol_Riesgo_elevado==0  ~ 2,
+                       Alcohol_Abstemio==0 & Alcohol_Bajo_Riesgo==0 & Alcohol_Riesgo_elevado==1  ~ 3
+                       ,TRUE~ NA_real_))
+#------------------------------------------------------------------#
+#PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
+#  mutate(Alc=case_when(alcAbs==1 & alcBaj==0 & alcAlt==0  ~ 1,
+#                          alcAbs==0 & alcBaj==1 & alcAlt==0  ~ 2,
+#                          alcAbs==0 & alcBaj==0 & alcAlt==1  ~ 3
+#                          ,TRUE~ NA_real_))
+#------------------------------------------------------------------#
+
 
 
 #------------------------------------------------------------------#
@@ -759,11 +1057,17 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
 #estPacDisFa	                          [Estado paciente.Discontinuado por fallecimiento]
 #------------------------------------------------------------------#
 PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
-  mutate(EstPac=case_when(estPacInc==1 & estPacDisAb==0 & estPacDisFa==0  ~ 1,
-                          estPacInc==0 & estPacDisAb==1 & estPacDisFa==0  ~ 2,
-                          estPacInc==0 & estPacDisAb==0 & estPacDisFa==1  ~ 3
+  mutate(EstPac=case_when(Estado_paciente_Incluido==1 & Estado_paciente_Discontinuado_abandono==0 & Estado_paciente_Discontinuado_fallecimiento==0  ~ 1,
+                          Estado_paciente_Incluido==0 & Estado_paciente_Discontinuado_abandono==1 & Estado_paciente_Discontinuado_fallecimiento==0  ~ 2,
+                          Estado_paciente_Incluido==0 & Estado_paciente_Discontinuado_abandono==0 & Estado_paciente_Discontinuado_fallecimiento==1  ~ 3
                        ,TRUE~ NA_real_))
 
+
+#PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
+#  mutate(EstPac=case_when(estPacInc==1 & estPacDisAb==0 & estPacDisFa==0  ~ 1,
+#                          estPacInc==0 & estPacDisAb==1 & estPacDisFa==0  ~ 2,
+#                          estPacInc==0 & estPacDisAb==0 & estPacDisFa==1  ~ 3
+#                          ,TRUE~ NA_real_))
 
 #------------------------------------------------------------------#
 #xi)-Estado CRD
@@ -774,9 +1078,14 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
 #estCrdFin	                            [Estado CRD.Finalizado]
 #------------------------------------------------------------------#
 PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
-  mutate(EstCrd=case_when(estCrdCur==1 & estCrdFin==0  ~ 1,
-                          estCrdCur==0 & estCrdFin==1   ~ 2
-                                                    ,TRUE~ NA_real_))
+  mutate(EstCrd=case_when(Estado_Crd_En_Curso==1 & Estado_Crd_Finalizado==0  ~ 1,
+                          Estado_Crd_En_Curso==0 & Estado_Crd_Finalizado==1   ~ 2
+                          ,TRUE~ NA_real_))
+#------------------------------------------------------------------#
+#PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
+#  mutate(EstCrd=case_when(estCrdCur==1 & estCrdFin==0  ~ 1,
+#                          estCrdCur==0 & estCrdFin==1   ~ 2
+#                                                    ,TRUE~ NA_real_))
 #------------------------------------------------------------------#
 
 
@@ -799,8 +1108,13 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
 #table(PEU_CAT_CDRS$pedioDer,useNA="always")
 #table(PEU_CAT_CDRS$pedioIzq	,useNA="always")
 
-PEU_CAT_CDRS<-PEU_CAT_CDRS%>%mutate(ArtPer_Der=tibPosDer+pedioDer)
-PEU_CAT_CDRS<-PEU_CAT_CDRS%>%mutate(ArtPer_Izq=tibPosIzq+pedioIzq)
+PEU_CAT_CDRS<-PEU_CAT_CDRS%>%mutate(ArtPer_Der=Tibial_posterior_pie_derecho+Pediopie_derecho)
+PEU_CAT_CDRS<-PEU_CAT_CDRS%>%mutate(ArtPer_Izq=Tibial_posterior_pie_izquierdo+Pediopie_izquierdo)
+
+
+#PEU_CAT_CDRS<-PEU_CAT_CDRS%>%mutate(ArtPer_Der=tibPosDer+pedioDer)
+#PEU_CAT_CDRS<-PEU_CAT_CDRS%>%mutate(ArtPer_Izq=tibPosIzq+pedioIzq)
+
 
 #table(PEU_CAT_CDRS$ArtPer_Izq	,useNA="always")
 
@@ -815,46 +1129,59 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS%>%mutate(ArtPer_Izq=tibPosIzq+pedioIzq)
 #- [[antecedentes de amputacion]]
 
 
-
-
-
-
-
-#ok
-
+  
 #Antecedentes ulceras
-
-PEU_CAT_CDRS_ulceras<-read_excel(fitxer_dades,sheet="Antecedentesulceras")
-
-#PEU_CAT_CDRS_ulceras 
-
+#---------------------------------------------------------------------------------------------------------------------#
+PEU_CAT_CDRS_ulceras<-read_excel(here::here("Dades",fitxer_dades),sheet="exportacionAntecedentesUlceras")
 PEU_CAT_CDRS_ulceras2<-PEU_CAT_CDRS_ulceras%>%
-  dplyr::group_by(idcrd) %>%
-  dplyr::summarise(sum_latIzq = sum(latIzq),sum_latDer = sum(latDer))%>%
-  ungroup 
-
+  dplyr::group_by(idcrd) %>%dplyr::summarise(sum_latIzq = sum(Lateralidad_Izquierda),sum_latDer = sum(Lateralidad_Derecha))%>%ungroup 
 PEU_CAT_CDRS_ulceras2<-PEU_CAT_CDRS_ulceras2%>%mutate(ulceras=sum_latIzq+sum_latDer)
 PEU_CAT_CDRS_ulceras2<-PEU_CAT_CDRS_ulceras2%>%select(idcrd,ulceras)%>%arrange(idcrd) 
 PEU_CAT_CDRS_ulceras2
+#---------------------------------------------------------------------------------------------------------------------#
+#PEU_CAT_CDRS_ulceras<-read_excel(fitxer_dades,sheet="Antecedentesulceras")
+#PEU_CAT_CDRS_ulceras 
+#PEU_CAT_CDRS_ulceras2<-PEU_CAT_CDRS_ulceras%>%
+#  dplyr::group_by(idcrd) %>%
+#  dplyr::summarise(sum_latIzq = sum(latIzq),sum_latDer = sum(latDer))%>%
+#  ungroup 
+#PEU_CAT_CDRS_ulceras2<-PEU_CAT_CDRS_ulceras2%>%mutate(ulceras=sum_latIzq+sum_latDer)
+#PEU_CAT_CDRS_ulceras2<-PEU_CAT_CDRS_ulceras2%>%select(idcrd,ulceras)%>%arrange(idcrd) 
+#PEU_CAT_CDRS_ulceras2
+#---------------------------------------------------------------------------------------------------------------------#
+
+
 
 #AntecedentesAmputacion
 #------------------------------------------------------------------#
 
+#exportacionAntecedentesUlceras
+#exportacionAntecedentesAmputaci
 
 
-#PEU_CAT_CDRS_amputaciones2
 
-PEU_CAT_CDRS_amputaciones<-read_excel(fitxer_dades,sheet="Antecedentesamputacion")
-
+PEU_CAT_CDRS_amputaciones<-read_excel(here::here("Dades",fitxer_dades),sheet="exportacionAntecedentesAmputaci")
 PEU_CAT_CDRS_amputaciones2<-PEU_CAT_CDRS_amputaciones%>%
   dplyr::group_by(idcrd)%>%
-  dplyr::summarize(sum_latIzq = sum(latIzq),sum_latDer = sum(latDer))%>% 
+  dplyr::summarize(sum_latIzq = sum(Lateralidad_Izquierda),sum_latDer = sum(Lateralidad_Derecha))%>% 
   ungroup 
-
-
 PEU_CAT_CDRS_amputaciones2<-PEU_CAT_CDRS_amputaciones2%>%mutate(amputaciones=sum_latIzq+sum_latDer)
 PEU_CAT_CDRS_amputaciones2
 PEU_CAT_CDRS_amputaciones2<-PEU_CAT_CDRS_amputaciones2%>%select(idcrd,amputaciones)%>%arrange(idcrd) 
+
+
+
+
+#PEU_CAT_CDRS_amputaciones<-read_excel(fitxer_dades,sheet="Antecedentesamputacion")
+#PEU_CAT_CDRS_amputaciones2<-PEU_CAT_CDRS_amputaciones%>%
+#  dplyr::group_by(idcrd)%>%
+#  dplyr::summarize(sum_latIzq = sum(latIzq),sum_latDer = sum(latDer))%>% 
+#  ungroup 
+#PEU_CAT_CDRS_amputaciones2<-PEU_CAT_CDRS_amputaciones2%>%mutate(amputaciones=sum_latIzq+sum_latDer)
+#PEU_CAT_CDRS_amputaciones2
+#PEU_CAT_CDRS_amputaciones2<-PEU_CAT_CDRS_amputaciones2%>%select(idcrd,amputaciones)%>%arrange(idcrd) 
+
+
 
 
 
@@ -868,13 +1195,15 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS%>%left_join(PEU_CAT_CDRS_amputaciones2, by="idcrd")
 
 
 
-
+#[mirar-ho!!! ]
 
 
 
 
 #------------------------------------------------------------------#
 #conductor_variables<-"taulavariables_v2_PEU3.xls"
+#PEU_CAT_CDRS_amputaciones<-read_excel(here::here("Dades",fitxer_dades),sheet="exportacionAntecedentesAmputaci")
+#------------------------------------------------------------------#
 
 conductor_variables<-"taulavariables_v2_PEU4.xls"
 
@@ -890,6 +1219,45 @@ PEU_CAT_CDRS<-etiquetar(d=PEU_CAT_CDRS,taulavariables=conductor_variables)
 
 
 # TAULES 
+#------------------------------------------------------------------------------------------#
+#                        2. CONVERTIR DATES![de numeric a codo Data!]
+#------------------------------------------------------------------------------------------#
+#------------------------------------------------------------------#
+convertir_dates<-function(d=dadestotal,taulavariables="variables_R.xls")
+  
+  d=PEU_CAT_CDRS
+  taulavariables="taulavariables_v2_PEU4.xls"
+  
+{
+  ####  Llegir etiquetes i variables a analitzar ####
+  variables <- readxl::read_excel(taulavariables)
+  variables[is.na(variables)]<- 0
+  #
+  #
+  ###################################   etiquetar variables         
+  seleccio<-variables
+  camp<- as.vector(seleccio$camp) #
+  # dates<-as.vector(seleccio$dates)
+  # dates<-seleccio[[campdata]]
+  ### etiquetar variables seleccionades     #
+  
+  for (i in 1:length(camp)){if (seleccio$dates[i]==1) { 
+    
+    pepito<-paste0("as.Date(d[[camp[",i,"]]], '%Y%d%m')")
+    
+    d[[camp[i]]]<-eval(parse(text=pepito))
+    
+  } }
+  
+  d
+  
+}
+#------------------------------------------------------------------#
+
+
+
+
+
 
 
 
