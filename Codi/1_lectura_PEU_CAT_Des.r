@@ -1,6 +1,10 @@
+#(ACTUALITZACIONS)
+#--------------------------------------------------------------------------------#
+#[21.12.2019]
+#--------------------------------------------------------------------------------#
 #[20.12.2019]
 #--------------------------------------------------------------------------------#
-#[19.12.2019]                       (ACTUALITZACIONS)
+#[19.12.2019]                      
 #--------------------------------------------------------------------------------#
 #[16.11.2019]               
 #--------------------------------------------------------------------------------#
@@ -327,6 +331,9 @@ devtools::source_url(link_source)
 #Ipswitch_Touch_Test_derecho
 #Ipswitch_Touch_Test_izquierdo
 #Motivo_no_realizacion
+
+
+
 #--------------------------------------------------------------------------#
 #--------------------------------------------------------------------------#
 #[abans! ]
@@ -545,15 +552,19 @@ devtools::source_url(link_source)
 #"C:/Users/Suta/Desktop/peucat_FINAL2"%>% file.path("funcions_propies_2019.R") %>% source()
 #----------------------------------------------------#
 #EPPPPS!!!! dubte preguntar Jordi Real!!
+
 fitxer_dades<-"exportacion22112019_Dep_Magda2.xls"
+
 #----------------------------------------------------#
 #read_excel("Dades/exportacion22112019_Dep_Magda2.xls",sheet="exportacionCRDS")
 #read_excel(paste0("Dades/","exportacion22112019_Dep_Magda2.xls"),sheet="exportacionCRDS")
 #read_excel(paste0("Dades/",fitxer_dades),sheet="exportacionCRDS")
 #read_excel(paste0("Dades/",fitxer_dades),sheet="exportacionCRDS")
+
 PEU_CAT_CDRS<-read_excel(here::here("Dades",fitxer_dades),sheet="exportacionCRDS")
 #----------------------------------------------------#
 #PEU_CAT_CDRS<-read_excel(fitxer_dades,sheet="exportacionCRDS")
+
 variable.names(PEU_CAT_CDRS)
 #fitxer_dades="exportacionCRD_peu_cat_final3.xls"
 #PEU_CAT_CDRS<-read_excel(fitxer_dades,sheet="CRDS")
@@ -787,7 +798,6 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS %>%
 PEU_CAT_CDRS<-PEU_CAT_CDRS %>%
   mutate(Ano_consentimiento_informado=as.numeric(format(PEU_CAT_CDRS$Fecha_consentimiento_informado,'%Y'))) 
 #----------------------------------------------------------------#  
-
 PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
   mutate(TiempDM=(Ano_consentimiento_informado) -Ano_de_diagnostico_definitivo_de_DM)
 #----------------------------------------------------------------#
@@ -807,7 +817,12 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
 
 
 #----------------------------------------------------------------#
-#ii)-Pacients Incluits(s/n)==PacInc, Pacients Excluits(s/n)==PacExc, PacIncExc(0	Pacients Excluidos 1:Pacientes Incluidos)
+#ii)
+
+# Pacients Incluits(s/n)==PacInc, 
+# Pacients Excluits(s/n)==PacExc, 
+# PacIncExc(0	Pacients Excluidos 1:Pacientes Incluidos)
+
 #----------------------------------------------------------------#
 
 #Criterios_inclusion_1
@@ -823,13 +838,18 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
 
 
 PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
-  mutate(PacInc=ifelse(Criterios_inclusion_1==1 & Criterios_inclusion_2==1 & Criterios_inclusion_1==1 ,1,0))
+  mutate(PacInc=ifelse(Criterios_inclusion_1==1 &
+                         Criterios_inclusion_2==1 & 
+                          Criterios_inclusion_3==1 ,1,0))
 
 PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
-  mutate(PacExc=ifelse(Criterios_exclusion_1==1  | Criterios_exclusion_2==1  | Criterios_exclusion_3==1,1,0))
+  mutate(PacExc=ifelse(Criterios_exclusion_1==1  | 
+                         Criterios_exclusion_2==1  | 
+                          Criterios_exclusion_3==1,1,0))
 
 PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
-  mutate(PacIncExc=ifelse(PacInc==1 & PacExc==0 ,1,0))
+  mutate(PacIncExc=ifelse(PacInc==1 & 
+                            PacExc==0 ,1,0))
 
 
 
@@ -905,7 +925,7 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
   mutate(Ipswitch_Touch_Test_izquierdo=case_when(Ipswitch_Touch_Test_izquierdo==3 ~ 0,Ipswitch_Touch_Test_izquierdo<=2  ~ 1,TRUE~ NA_real_))
 #------------------------------------------------------------------#
 
-PEU_CAT_CDRS$Ipswitch_Touch_Test_izquierdo
+#PEU_CAT_CDRS$Ipswitch_Touch_Test_izquierdo
 
 
 #------------------------------------------------------------------#
@@ -952,7 +972,7 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
 #------------------------------------------------------------------#
 PEU_CAT_CDRS<-PEU_CAT_CDRS%>%mutate(Sexo=case_when(Sexo_Hombre==1 & Sexo_Mujer==0 ~ 1,Sexo_Hombre==0 & Sexo_Mujer==1 ~ 2,TRUE~ NA_real_))
 #------------------------------------------------------------------#
-PEU_CAT_CDRS$Sexo
+#PEU_CAT_CDRS$Sexo
 #------------------------------------------------------------------#
 #PEU_CAT_CDRS<-PEU_CAT_CDRS%>%
 #  mutate(Sexo=case_when(sexoHombre==1 & sexoMujer==0 ~ 1,sexoHombre==0 & sexoMujer==1 ~ 2,TRUE~ NA_real_))
@@ -1189,13 +1209,13 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS%>%left_join(PEU_CAT_CDRS_ulceras2, by="idcrd")
 PEU_CAT_CDRS<-PEU_CAT_CDRS%>%left_join(PEU_CAT_CDRS_amputaciones2, by="idcrd")
 
 
-#names(PEU_CAT_CDRS)
+names(PEU_CAT_CDRS)
 
 
 
 
 
-#[mirar-ho!!! ]
+
 
 
 
@@ -1205,62 +1225,15 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS%>%left_join(PEU_CAT_CDRS_amputaciones2, by="idcrd")
 #PEU_CAT_CDRS_amputaciones<-read_excel(here::here("Dades",fitxer_dades),sheet="exportacionAntecedentesAmputaci")
 #------------------------------------------------------------------#
 
+#------------------------------------------------------------------#
 conductor_variables<-"taulavariables_v2_PEU4.xls"
-
 #------------------------------------------------------------------#
 PEU_CAT_CDRS<-convertir_dates(d=PEU_CAT_CDRS,taulavariables=conductor_variables)
 PEU_CAT_CDRS<-LAB_ETIQ_v2(dt=PEU_CAT_CDRS,variables_factors=conductor_variables,fulla="etiquetes",idioma="etiqueta2")
 PEU_CAT_CDRS<-etiquetar(d=PEU_CAT_CDRS,taulavariables=conductor_variables)
 #------------------------------------------------------------------#
 
-
-#names(PEU_CAT_CDRS)
-
-
-
-# TAULES 
-#------------------------------------------------------------------------------------------#
-#                        2. CONVERTIR DATES![de numeric a codo Data!]
-#------------------------------------------------------------------------------------------#
-#------------------------------------------------------------------#
-convertir_dates<-function(d=dadestotal,taulavariables="variables_R.xls")
-  
-  d=PEU_CAT_CDRS
-  taulavariables="taulavariables_v2_PEU4.xls"
-  
-{
-  ####  Llegir etiquetes i variables a analitzar ####
-  variables <- readxl::read_excel(taulavariables)
-  variables[is.na(variables)]<- 0
-  #
-  #
-  ###################################   etiquetar variables         
-  seleccio<-variables
-  camp<- as.vector(seleccio$camp) #
-  # dates<-as.vector(seleccio$dates)
-  # dates<-seleccio[[campdata]]
-  ### etiquetar variables seleccionades     #
-  
-  for (i in 1:length(camp)){if (seleccio$dates[i]==1) { 
-    
-    pepito<-paste0("as.Date(d[[camp[",i,"]]], '%Y%d%m')")
-    
-    d[[camp[i]]]<-eval(parse(text=pepito))
-    
-  } }
-  
-  d
-  
-}
-#------------------------------------------------------------------#
-
-
-
-
-
-
-
-
+#variable.names(PEU_CAT_CDRS)
 
 #names(LAB_ETIQ_PEU_CAT)
 #***********************************************************************#
@@ -1268,76 +1241,124 @@ convertir_dates<-function(d=dadestotal,taulavariables="variables_R.xls")
 formula_taula00<-formula_compare("taula00",y="",taulavariables = conductor_variables)
 T00<-descrTable(formula_taula00,method = 2,data=PEU_CAT_CDRS)
 #***********************************************************************#
-
 T00
+
+
+
+
+#***********************************************************************#
+#***********************************************************************#
+#[N=345]
+#***********************************************************************#
+#***********************************************************************#
 PEU_CAT_CDRS<-PEU_CAT_CDRS%>%filter(PacInc=="Si")
 table(PEU_CAT_CDRS$PacInc)
 
-#N=198.
-#------------------------------------------------------------------#
-#names(LAB_ETIQ_PEU_CAT)
+
+#PACIENTS INCLUITS!!!!
 #***********************************************************************#
-#taula0 Criteris  Exclusi?.
-formula_taula0<-formula_compare("taula0",y="",taulavariables = conductor_variables)
-T0<-descrTable(formula_taula0,method = 2,data=PEU_CAT_CDRS)
 #***********************************************************************#
-T0
+#[[N=264]]
+#***********************************************************************#
+#***********************************************************************#
+
 #flow-chart!:[]
-table(PEU_CAT_CDRS$exclu1)
-table(PEU_CAT_CDRS$exclu2)
-table(PEU_CAT_CDRS$exclu3)
+#***********************************************************************#
+table(PEU_CAT_CDRS$Criterios_exclusion_1)
+#Num_Excluits-->  1
+table(PEU_CAT_CDRS$Criterios_exclusion_2)
+#Num_Excluits--> 2
+table(PEU_CAT_CDRS$Criterios_exclusion_3)
+#Num_Excluits-->  6
+#***********************************************************************#
+
+table(PEU_CAT_CDRS$PacIncExc)
 
 
 
-#N=198.
-#diagramaFlowchart
+#[N=257]
 
-#diagramaFlowchart
+
+
 
 T13<-diagramaFlowchart(
   grups=1,
   pob_lab1=c("Pacientes con criterio de Inclusion ","Pacientes con criterio de Inclusion y sin criterios de Exclusion  "),
-  pob1=c(198,191),
-  exc1=c(2,1,7),
-  exc_lab1=c('Pacientes diagnosticados de DM1/Diabetis Gestacional/Diabetis Secundaria a medicamentos','Pacientes con una esperanza de vida < 1 a?o','Ulceras activas a inicio del estudio'),
+  pob1=c(264,257),
+  exc1=c(1,2,6),
+  exc_lab1=c('Pacientes diagnosticados de DM1/Diabetis Gestacional/Diabetis Secundaria a medicamentos',
+             'Pacientes con una esperanza de vida < 1 año',
+             'Ulceras activas a inicio del estudio'),
   colors=c('white','grey'),
   forma=c('box','box'))
 
 
 T13
 
-PEU_CAT_CDRS<-PEU_CAT_CDRS%>%filter(PacExc=="No")
-
-#N=191
 
 
-#Q1 = 0.025, Q3 = 0.975
 
-#LAB_ETIQ_PEU_CAT$coAlCre
+#PACIENTS INCLUITS!
+#[[N=264]]
 
-#taula1
-formula_taula1<-formula_compare("taula1",y="",taulavariables = conductor_variables)
-T1<-descrTable(formula_taula1,method = 2,Q1 = 0, Q3 =1 ,data=PEU_CAT_CDRS)
+
+
+
+#------------------------------------------------------------------#
+#names(LAB_ETIQ_PEU_CAT)
+#***********************************************************************#
+#Taula1 Criteris  Exclusio.
+formula_taula1<-formula_compare("taula01",y="",taulavariables = conductor_variables)
+T1<-descrTable(formula_taula1,method = 2,data=PEU_CAT_CDRS)
+#***********************************************************************#
 T1
 #***********************************************************************#
-#taula2
-formula_taula2<-formula_compare("taula2",y="",taulavariables = conductor_variables)
-T2<-descrTable(formula_taula2,method = 2,Q1 = 0, Q3 =1,data=PEU_CAT_CDRS)
+#
+#
+
+#PACIENTS INCLUITS!. i sense EXCLUSIONS![]
+#N=257.
+
+PEU_CAT_CDRS<-PEU_CAT_CDRS%>%filter(PacIncExc=="Pacientes Incluidos")
+table(PEU_CAT_CDRS$PacInc)
+
+
+
+#***********************************************************************#
+#Taula2
+formula_taula2<-formula_compare("taula02",y="",taulavariables = conductor_variables)
+T2<-descrTable(formula_taula2,method = 2,Q1 = 0, Q3 =1 ,data=PEU_CAT_CDRS)
 T2
 #***********************************************************************#
-#taula3
-formula_taula3<-formula_compare("taula3",y="",taulavariables = conductor_variables)
+#Taula3
+formula_taula3<-formula_compare("taula03",y="",taulavariables = conductor_variables)
 T3<-descrTable(formula_taula3,method = 2,Q1 = 0, Q3 =1,data=PEU_CAT_CDRS)
 T3
-formula_taula3Error<-formula_compare("Taula3Error",y="",taulavariables = conductor_variables)
-T3Error<-descrTable(formula_taula3Error,method = 2,Q1 = 0, Q3 =1,data=PEU_CAT_CDRS)
-T3Error
+#***********************************************************************#
+#Taula4
+formula_taula4<-formula_compare("taula04",y="",taulavariables = conductor_variables)
+T4<-descrTable(formula_taula4,method = 2,Q1 = 0, Q3 =1,data=PEU_CAT_CDRS)
+T4
+PEU_CAT_CDRS$Tratamiento_diabetes_no_farmacologico
+
+#***********************************************************************#
+#Taula5 
+formula_taula5<-formula_compare("taula05",y="",taulavariables = conductor_variables)
+T5<-descrTable(formula_taula5,method = 2,Q1 = 0, Q3 =1,data=PEU_CAT_CDRS)
+T5
+#***********************************************************************#
+
+
+#***********************************************************************#
+#[T00/T01/T1/T2/T3/T4/T5]
+#***********************************************************************#
+
+
+
 
 
 #[1.3.2019]
-
 #Canvis per corregir els errors
-
 #table(LAB_ETIQ_PEU_CAT$colTot)
 #table(LAB_ETIQ_PEU_CAT$colTot2)
 
@@ -1345,18 +1366,18 @@ T3Error
 
 #***********************************************************************#
 #taula3
-formula_taula3_Corregit<-formula_compare("Taula3Corregit",y="",taulavariables = conductor_variables)
-T3corregit<-descrTable(formula_taula3_Corregit,method = 2,Q1 = 0, Q3 =1,data=PEU_CAT_CDRS)
-T3corregit
+#formula_taula3_Corregit<-formula_compare("Taula3Corregit",y="",taulavariables = conductor_variables)
+#T3corregit<-descrTable(formula_taula3_Corregit,method = 2,Q1 = 0, Q3 =1,data=PEU_CAT_CDRS)
+#T3corregit
 
 
 
 
 #***********************************************************************#
 #taula4
-formula_taula4<-formula_compare("taula4",y="",taulavariables = conductor_variables)
-T4<-descrTable(formula_taula4,method = 2,Q1 = 0, Q3 =1,data=PEU_CAT_CDRS)
-T4
+#formula_taula4<-formula_compare("taula4",y="",taulavariables = conductor_variables)
+#T4<-descrTable(formula_taula4,method = 2,Q1 = 0, Q3 =1,data=PEU_CAT_CDRS)
+#T4
 #***********************************************************************#
 
 
@@ -1382,7 +1403,7 @@ T4
 
 
 
-save(T00,T0,T1,T2,T3,T3Error,T3corregit,T4,T13,file="ResultatsPEUCAT.Rdata")
+save(T00,T1,T2,T3,T4,T5,file="ResultatsPEUCAT2.Rdata")
 
 
 #1.- Monofilamento
