@@ -1,4 +1,6 @@
 #------------------------------------------------------------------------------------------#
+#10.01.2020
+#------------------------------------------------------------------------------------------#
 #[31.12.2019]
 #------------------------------------------------------------------------------------------#
 #[30.12.2019]
@@ -1437,6 +1439,10 @@ save(T00,T1,T2a,T3a,T4a,T5a,T13,file="ResultatsPEUCAT2.Rdata")
 
 
 
+
+
+
+
 # i TAULA2
 
 
@@ -1449,9 +1455,143 @@ save(T00,T1,T2a,T3a,T4a,T5a,T13,file="ResultatsPEUCAT2.Rdata")
 # ...i si és possible taula2
 # Tema  DataHarmonization!!!
 
+#10.01.2020
+
+#Tabla 2 ulceras basales 	
+
+#Variable	analisis 
+#-------------------------------------------------------------------------------#
+#Desencadenante.Uñas	N( frecuencia) 
+#Desencadenante.Zapatos	N( frecuencia) 
+#Desencadenante.Herida	N( frecuencia) 
+#Desencadenante.Golpe	N( frecuencia) 
+#Desencadenante.Callosidad	N( frecuencia) 
+#Desencadenante.Ejercicio	N( frecuencia) 
+#Desencadenante.Quemadura	N( frecuencia) 
+#Desencadenante.Hongos	N( frecuencia) 
+#Desencadenante.Desconocido	N( frecuencia) 
+#Desencadenante.Otros	N( frecuencia) 
+#Desencadenante.ExplicacionOtros	N( frecuencia) 
+#-------------------------------------------------------------------------------#
+#Localización.Izquierda	N( frecuencia) 
+#Localización.Derecha	N( frecuencia) 
+#-------------------------------------------------------------------------------#
+#Lugar.PlantaDedos	N( frecuencia) 
+#Lugar.Dorso dedos o espacios interdigitales	N( frecuencia) 
+#Lugar.Dorso o lateral del pie	N( frecuencia) 
+#Lugar.Planta antepie o medio pie	N( frecuencia) 
+#Lugar.Talón	N( frecuencia) 
+#-------------------------------------------------------------------------------#
+
+
+#-------------------------------------------------------------------------------#
+#Si fué derivado al hospital ¿Le han dado el alta?	N( frecuencia) 
+#Superficie	Media (SD)
+#Profundidad.Superficial	N( frecuencia) 
+#Profundidad.Profunda	N( frecuencia) 
+#Profundidad.Muy Profunda	N( frecuencia) 
+#Eritema perilesional < 2cm	N( frecuencia) 
+#Eritema perilesional > 2cm	N( frecuencia) 
+#Induración	N( frecuencia) 
+#-------------------------------------------------------------------------------#
+#Calor	N( frecuencia) 
+#Dolor	N( frecuencia) 
+#Secreción purulenta	N( frecuencia) 
+#Afectación sistémica	N( frecuencia) 
+#Linfangitis	N( frecuencia) 
+#Gangrena	N( frecuencia) 
+#Antiseptico	N( frecuencia) 
+#Apósito	N( frecuencia) 
+#-------------------------------------------------------------------------------#
+#Descarga con fieltro	N( frecuencia) 
+#Desbridamiento	N( frecuencia) 
+#Desbridamiento Tipo.Cortante	N( frecuencia) 
+#Desbridamiento Tipo.Quirúrgico	N( frecuencia) 
+#Desbridamiento Tipo.Enzimático	N( frecuencia) 
+#Desbridamiento Tipo.Autolítico	N( frecuencia) 
+#Antibiótico tópico	N( frecuencia) 
+#Antibiótico oral	N( frecuencia) 
+#¿Se realiza cultivo?	N( frecuencia) 
+#¿Se deriva?	N( frecuencia) 
+#Se deriva.Unidad de pie diabético	N( frecuencia) 
+#Se deriva.Cirugía vascular	N( frecuencia) 
+#Se deriva.Endocrinología	N( frecuencia) 
+#Se deriva.Podólogo	N( frecuencia) 
+#Se deriva.Otros	N( frecuencia) 
+#Explicación derivación otros	N( frecuencia) 
+#-------------------------------------------------------------------------------#
+
+
+# exportacionUlceras
+# exportacionUlcerasVisitas
+
+
+
+#----------------------------------------------------#
+fitxer_dades<-"exportacion22112019_Dep_Magda3_bog.xls"
+#----------------------------------------------------#
+PEU_CAT_CDRS2<-read_excel(here::here("Dades",fitxer_dades),sheet="exportacionUlceras")
+variable.names(PEU_CAT_CDRS2)
+#----------------------------------------------------#
+
+
+PEU_CAT_CDRS3<-read_excel(here::here("Dades",fitxer_dades),sheet="exportacionUlcerasVisitas")
+variable.names(PEU_CAT_CDRS3)
+PEU_CAT_CDRS3<-PEU_CAT_CDRS3%>%filter(idvisita==0) 
+
+PEU_CAT_CDRS3$Superficie <- as.numeric(PEU_CAT_CDRS3$Superficie)
 
 
 
 
+#mean(PEU_CAT_CDRS3$Superficie)
+
+conductor_variables<-"taulavariables_v2_PEU5.xls"
+#------------------------------------------------------------------#
+PEU_CAT_CDRS2<-convertir_dates(d=PEU_CAT_CDRS2,taulavariables=conductor_variables)
+PEU_CAT_CDRS2<-LAB_ETIQ_v2(dt=PEU_CAT_CDRS2,variables_factors=conductor_variables,fulla="etiquetes1",idioma="etiqueta2")
+PEU_CAT_CDRS2<-etiquetar(d=PEU_CAT_CDRS2,taulavariables=conductor_variables)
+#------------------------------------------------------------------#
+formula_taula0<-formula_compare("taula0",y="",taulavariables = conductor_variables)
+T6a<-descrTable(formula_taula0,method = 1,data=PEU_CAT_CDRS2,max.xlev = 100)
+
+#descrTable(~.,data=DT_PACIENT,show.p.overall=F,method = 2,Q1=0,Q3=1,max.xlev = 40)
+
+
+#------------------------------------------------------------------#
+T6a
+#------------------------------------------------------------------#
+
+#PEU_CAT_CDRS3$Explicacionderivacionotros
+
+#Eritemaperilesionalmenos2cm
+#Eritemaperilesionalmas2cm
+
+conductor_variables<-"taulavariables_v2_PEU6.xls"
+#------------------------------------------------------------------#
+PEU_CAT_CDRS3<-convertir_dates(d=PEU_CAT_CDRS3,taulavariables=conductor_variables)
+PEU_CAT_CDRS3<-LAB_ETIQ_v2(dt=PEU_CAT_CDRS3,variables_factors=conductor_variables,fulla="etiquetes2",idioma="etiqueta2")
+PEU_CAT_CDRS3<-etiquetar(d=PEU_CAT_CDRS3,taulavariables=conductor_variables)
+
+#------------------------------------------------------------------#
+formula_taula1<-formula_compare("taula1",y="",taulavariables = conductor_variables)
+T7a<-descrTable(formula_taula1,method = 1,data=PEU_CAT_CDRS3,max.xlev = 100)
+#------------------------------------------------------------------#
+T7a
+#------------------------------------------------------------------#
+
+
+
+
+save(T6a,T7a,file="ResultatsPEUCAT3.Rdata")
+
+
+#   Les  pàgines Excel : [fitxer_dades<-"exportacion22112019_Dep_Magda3_bog.xls"]
+
+#   [exportacionCRDS]
+#   [exportacionUlceras]
+#   [exportacionUlcerasVisitas]
+
+#   EXCEL. --> S'HA CANVIAT  [A.B --> A_B ; A B --> AB ; À --> A ]    
 
 
