@@ -14,6 +14,7 @@
 #                        1. ETIQUETAR VARIABLES! []
 #------------------------------------------------------------------------------------------#
 ###
+#
 
 etiquetar<-function(d=dadestotal,taulavariables="variables_R.xls") {
   
