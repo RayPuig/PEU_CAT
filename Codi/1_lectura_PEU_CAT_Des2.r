@@ -1,4 +1,7 @@
 #------------------------------------------------------------------------------------------#
+#[13.01.2020]
+
+#------------------------------------------------------------------------------------------#
 #10.01.2020
 #------------------------------------------------------------------------------------------#
 #[31.12.2019]
@@ -16,97 +19,98 @@
 ###
 #
 
-etiquetar<-function(d=dadestotal,taulavariables="variables_R.xls") {
-  
-  ####  Llegir etiquetes i variables a analitzar ####
-  variables <- readxl::read_excel(taulavariables)
-  variables[is.na(variables)]<- 0
-  #
-  #
-  ###################################   etiquetar variables         
-  seleccio<-variables
-  camp<- as.vector(seleccio$camp) #
-  descripcio<- as.vector(seleccio$descripcio) #
-  ### etiquetar variables seleccionades     #
-  for (i in 2:length(descripcio)){if (any(colnames(d) == camp[i])) {Hmisc::label(d[[camp[i]]]) <- descripcio[i]}}
-  d
-}
+#etiquetar<-function(d=dadestotal,taulavariables="variables_R.xls") {
+#  
+#  ####  Llegir etiquetes i variables a analitzar ####
+#  variables <- readxl::read_excel(taulavariables)
+#  variables[is.na(variables)]<- 0
+#  #
+#  #
+#  ###################################   etiquetar variables         
+#  seleccio<-variables
+#  camp<- as.vector(seleccio$camp) #
+#  descripcio<- as.vector(seleccio$descripcio) #
+#  ### etiquetar variables seleccionades     #
+#  for (i in 2:length(descripcio)){if (any(colnames(d) == camp[i])) {Hmisc::label(d[[camp[i]]]) <- descripcio[i]}}
+#  d
+#}
 
 #------------------------------------------------------------------------------------------#
 #                        2. CONVERTIR DATES![de numeric a codo Data!]
 #------------------------------------------------------------------------------------------#
 #------------------------------------------------------------------#
-convertir_dates<-function(d=dadestotal,taulavariables="variables_R.xls")
-  
-{
-  ####  Llegir etiquetes i variables a analitzar ####
-  variables <- readxl::read_excel(taulavariables)
-  variables[is.na(variables)]<- 0
-  #
-  #
-  ###################################   etiquetar variables         
-  seleccio<-variables
-  camp<- as.vector(seleccio$camp) #
-  # dates<-as.vector(seleccio$dates)
-  # dates<-seleccio[[campdata]]
-  ### etiquetar variables seleccionades     #
-  
-  for (i in 1:length(camp)){if (seleccio$dates[i]==1) { 
-    
-    pepito<-paste0("as.Date(d[[camp[",i,"]]], '%Y%d%m')")
-    
-    d[[camp[i]]]<-eval(parse(text=pepito))
-    
-  } }
-  
-  d
-  
-}
+
+#convertir_dates<-function(d=dadestotal,taulavariables="variables_R.xls")
+#  
+#{
+#  ####  Llegir etiquetes i variables a analitzar ####
+#  variables <- readxl::read_excel(taulavariables)
+#  variables[is.na(variables)]<- 0
+#  #
+#  #
+#  ###################################   etiquetar variables         
+#  seleccio<-variables
+#  camp<- as.vector(seleccio$camp) #
+#  # dates<-as.vector(seleccio$dates)
+#  # dates<-seleccio[[campdata]]
+#  ### etiquetar variables seleccionades     #
+#  
+#  for (i in 1:length(camp)){if (seleccio$dates[i]==1) { 
+#    
+#    pepito<-paste0("as.Date(d[[camp[",i,"]]], '%Y%d%m')")
+#    
+#    d[[camp[i]]]<-eval(parse(text=pepito))
+#    
+#  } }
+#  
+#  d
+# }
 #------------------------------------------------------------------#
-
-
-
-
 #------------------------------------------------------------------#
-LAB_ETIQ_v2<-function(dt=dades,variables_factors=conductor_variables,fulla="etiquetes",idioma="etiqueta1"){
-  
-  #dt=dades
-  #variables_factors=conductor_variables
-  
-  
-  #------------------------------------------------------------------#
-  variables_factors<-readxl::read_excel(variables_factors,sheet=fulla)
-  #------------------------------------------------------------------#
-  
-  
-  
-  if (idioma=="etiqueta1") {
-    
-    k<-variables_factors%>%select(camp, valor,etiqueta1)
-    
-  } else if (idioma=="etiqueta2") {
-    
-    k<-variables_factors%>%select(camp, valor,etiqueta2)
-    k<-k%>%mutate(etiqueta1=etiqueta2)
-    k<-k%>%select(camp, valor,etiqueta1)
-    
-  }
-  
-  
-  #------------------------------------------------------------------#
-  pepe<-k %>% split(list(.$camp))
-  #------------------------------------------------------------------#
-  #
-  noms_variables<-names(pepe)
-  num_vars<-length(noms_variables)
-  
-  for (i in 1:num_vars) {
-    
-    dt[noms_variables[i]]<-lapply(dt[noms_variables[i]],function(y) factor(y,levels=pepe[[i]]$valor,labels=pepe[[i]]$etiqueta1))
-    
-  }
-  
-  dt}
+#LAB_ETIQ_v2<-function(dt=dades,variables_factors=conductor_variables,fulla="etiquetes",idioma="etiqueta1"){
+#  
+#  #dt=dades
+#  #variables_factors=conductor_variables
+#  
+#  
+#  #------------------------------------------------------------------#
+#  variables_factors<-readxl::read_excel(variables_factors,sheet=fulla)
+#  #------------------------------------------------------------------#
+#  
+#  
+#  
+#  if (idioma=="etiqueta1") {
+#    
+#    k<-variables_factors%>%select(camp, valor,etiqueta1)
+#    
+#  } else if (idioma=="etiqueta2") {
+#    
+#    k<-variables_factors%>%select(camp, valor,etiqueta2)
+#    k<-k%>%mutate(etiqueta1=etiqueta2)
+#    k<-k%>%select(camp, valor,etiqueta1)
+#    
+#  }
+#  
+#  
+#  #------------------------------------------------------------------#
+#  pepe<-k %>% split(list(.$camp))
+#  #------------------------------------------------------------------#
+#  #
+#  noms_variables<-names(pepe)
+#  num_vars<-length(noms_variables)
+#  
+#  for (i in 1:num_vars) {
+#    
+#    dt[noms_variables[i]]<-lapply(dt[noms_variables[i]],function(y) factor(y,levels=pepe[[i]]$valor,labels=pepe[[i]]$etiqueta1))
+#    
+#  }
+#  
+#  dt}
+##############
+
+
+
+
 #------------------------------------------------------------------#
 #install.packages("readxl")
 #--------------------------------------------------------------------------------#
@@ -1162,12 +1166,14 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS%>%mutate(Ipswitch_Touch_Test=ifelse((Ipswitch_Touch_T
 
 
 
+#etiquetar
+#etiquetar_taula
+#etiquetar_valors
 
 
 
 
-
-
+  
 
 
 
@@ -1179,8 +1185,18 @@ PEU_CAT_CDRS<-PEU_CAT_CDRS%>%mutate(Ipswitch_Touch_Test=ifelse((Ipswitch_Touch_T
 #------------------------------------------------------------------#
 conductor_variables<-"taulavariables_v2_PEU4.xls"
 #------------------------------------------------------------------#
+
+#LAB_ETIQ_v2  
+
+
+
+
+
+
+#------------------------------------------------------------------#
 PEU_CAT_CDRS<-convertir_dates(d=PEU_CAT_CDRS,taulavariables=conductor_variables)
-PEU_CAT_CDRS<-LAB_ETIQ_v2(dt=PEU_CAT_CDRS,variables_factors=conductor_variables,fulla="etiquetes",idioma="etiqueta2")
+PEU_CAT_CDRS<-etiquetar_valors(dt=PEU_CAT_CDRS,variables_factors=conductor_variables,fulla="etiquetes",camp_etiqueta="etiqueta2")
+#PEU_CAT_CDRS<-LAB_ETIQ_v2(dt=PEU_CAT_CDRS,variables_factors=conductor_variables,fulla="etiquetes",idioma="etiqueta2")
 PEU_CAT_CDRS<-etiquetar(d=PEU_CAT_CDRS,taulavariables=conductor_variables)
 #------------------------------------------------------------------#
 
@@ -1550,7 +1566,7 @@ PEU_CAT_CDRS3$Superficie <- as.numeric(PEU_CAT_CDRS3$Superficie)
 conductor_variables<-"taulavariables_v2_PEU5.xls"
 #------------------------------------------------------------------#
 PEU_CAT_CDRS2<-convertir_dates(d=PEU_CAT_CDRS2,taulavariables=conductor_variables)
-PEU_CAT_CDRS2<-LAB_ETIQ_v2(dt=PEU_CAT_CDRS2,variables_factors=conductor_variables,fulla="etiquetes1",idioma="etiqueta2")
+PEU_CAT_CDRS2<-etiquetar_valors(dt=PEU_CAT_CDRS2,variables_factors=conductor_variables,fulla="etiquetes1",camp_etiqueta="etiqueta2")
 PEU_CAT_CDRS2<-etiquetar(d=PEU_CAT_CDRS2,taulavariables=conductor_variables)
 #------------------------------------------------------------------#
 formula_taula0<-formula_compare("taula0",y="",taulavariables = conductor_variables)
@@ -1571,7 +1587,7 @@ T6a
 conductor_variables<-"taulavariables_v2_PEU6.xls"
 #------------------------------------------------------------------#
 PEU_CAT_CDRS3<-convertir_dates(d=PEU_CAT_CDRS3,taulavariables=conductor_variables)
-PEU_CAT_CDRS3<-LAB_ETIQ_v2(dt=PEU_CAT_CDRS3,variables_factors=conductor_variables,fulla="etiquetes2",idioma="etiqueta2")
+PEU_CAT_CDRS3<-etiquetar_valors(dt=PEU_CAT_CDRS3,variables_factors=conductor_variables,fulla="etiquetes2",camp_etiqueta="etiqueta2")
 PEU_CAT_CDRS3<-etiquetar(d=PEU_CAT_CDRS3,taulavariables=conductor_variables)
 
 #------------------------------------------------------------------#
